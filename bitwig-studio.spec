@@ -1,11 +1,11 @@
 Name:           bitwig-studio
-Version:        4.1.2
+Version:        4.2.3
 Release:        1%{?dist}
 Summary:        DAW & music production software
 
 License:        Proprietary
 URL:            https://bitwig.com
-Source0:        https://downloads-na.bitwig.com/stable/%{version}/%{name}-%{version}.deb
+Source0:        https://downloads.bitwig.com/stable/%{version}/%{name}-%{version}.deb
 
 %description
 Bitwig Studio is a digital audio workstation (DAW) and music production software.
@@ -15,7 +15,7 @@ ar p %{_topdir}/SOURCES/%{name}-%{version}.deb data.tar.xz | tar -xJf -
 
 %install
 cp -a opt usr %{buildroot}
-export QA_RPATHS=$[ 0x0020|0x0002 ]
+export QA_RPATHS=$(( 0x0020|0x0002 ))
 
 %files
 /opt/bitwig-studio
@@ -38,5 +38,11 @@ export QA_RPATHS=$[ 0x0020|0x0002 ]
 /usr/share/mime/packages/com.bitwig.BitwigStudio.xml
 
 %changelog
+* Tue Apr 19 2022 Jean Lucas <jean@4ray.co> - 4.2.3-1
+- Version bump to 4.2.3, add build script
+
+* Sat Mar 12 2022 Jean Lucas <jean@4ray.co> - 4.2-1
+- Version bump to 4.2
+
 * Sun Dec 26 2021 Jean Lucas <jean@4ray.co> - 4.1.2-1
 - Initial commit
