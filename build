@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+set -e
+
+clear
+
+SPEC=bitwig-studio.spec
+
+spectool -g $SPEC
+
+VERSION=$(rg Version: $SPEC | awk '{print $2}')
+
+test -e "$HOME"/rpmbuild/SOURCES/bitwig-studio-"$VERSION".deb || cp -v bitwig-studio-"$VERSION".deb "$HOME"/rpmbuild/SOURCES
+
+rpmbuild -bs $SPEC
+
+OS_VERSION=$(rg VERSION_ID /etc/os-release | tr '=' \  | awk '{print $2}')
+
+QA_RPATHS=$(( 0x0020|0x0002 )) rpmbuild --rebuild "$HOME/rpmbuild/SRPMS/bitwig-studio-$VERSION-1.fc$OS_VERSION.src.rpm"
+
+sudo dnf install "$HOME/rpmbuild/RPMS/x86_64/bitwig-studio-$VERSION-1.fc$OS_VERSION.x86_64.rpm"
