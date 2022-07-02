@@ -1,5 +1,5 @@
 Name:           bitwig-studio
-Version:        4.2.3
+Version:        4.3
 Release:        1%{?dist}
 Summary:        DAW & music production software
 
@@ -27,6 +27,7 @@ export QA_RPATHS=$(( 0x0020|0x0002 ))
 /usr/share/icons/hicolor/scalable/mimetypes/com.bitwig.BitwigStudio.application-bitwig-clip.svg
 /usr/share/icons/hicolor/scalable/mimetypes/com.bitwig.BitwigStudio.application-bitwig-device.svg
 /usr/share/icons/hicolor/scalable/mimetypes/com.bitwig.BitwigStudio.application-bitwig-extension.svg
+/usr/share/icons/hicolor/scalable/mimetypes/com.bitwig.BitwigStudio.application-bitwig-impulse.svg
 /usr/share/icons/hicolor/scalable/mimetypes/com.bitwig.BitwigStudio.application-bitwig-modulator.svg
 /usr/share/icons/hicolor/scalable/mimetypes/com.bitwig.BitwigStudio.application-bitwig-module.svg
 /usr/share/icons/hicolor/scalable/mimetypes/com.bitwig.BitwigStudio.application-bitwig-package.svg
@@ -38,6 +39,9 @@ export QA_RPATHS=$(( 0x0020|0x0002 ))
 /usr/share/mime/packages/com.bitwig.BitwigStudio.xml
 
 %changelog
+* Sat Jul 2 2022 Jean Lucas <jean@4ray.co> - 4.3-1
+- Version bump to 4.3, add README
+
 * Tue Apr 19 2022 Jean Lucas <jean@4ray.co> - 4.2.3-1
 - Version bump to 4.2.3, add build script
 
