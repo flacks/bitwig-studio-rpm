@@ -1,11 +1,11 @@
-Name:           bitwig-studio
-Version:        4.3
-Release:        1%{?dist}
-Summary:        DAW & music production software
+Name:		bitwig-studio
+Version:	4.4.5
+Release:	1%{?dist}
+Summary:	DAW & music production software
 
-License:        Proprietary
-URL:            https://bitwig.com
-Source0:        https://downloads.bitwig.com/stable/%{version}/%{name}-%{version}.deb
+License:	Proprietary
+URL:		https://bitwig.com
+Source0:	https://downloads.bitwig.com/stable/%{version}/%{name}-%{version}.deb
 
 %description
 Bitwig Studio is a digital audio workstation (DAW) and music production software.
@@ -39,6 +39,18 @@ export QA_RPATHS=$(( 0x0020|0x0002 ))
 /usr/share/mime/packages/com.bitwig.BitwigStudio.xml
 
 %changelog
+* Mon Dec 12 2022 Jean Lucas <jean@4ray.co> - 4.4.5
+- 4.4.5
+
+* Sun Oct 9 2022 Jean Lucas <jean@4ray.co> - 4.3.10-1
+- 4.3.10
+
+* Fri Sep 23 2022 Jean Lucas <jean@4ray.co> - 4.3.8-1
+- 4.3.8
+
+* Mon Aug 22 2022 Jean Lucas <jean@4ray.co> - 4.3.4-1
+- 4.3.4
+
 * Sat Jul 2 2022 Jean Lucas <jean@4ray.co> - 4.3-1
 - Version bump to 4.3, add README
 
