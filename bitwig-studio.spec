@@ -1,5 +1,5 @@
 Name:		bitwig-studio
-Version:	4.4.5
+Version:	4.4.6
 Release:	1%{?dist}
 Summary:	DAW & music production software
 
@@ -39,6 +39,9 @@ export QA_RPATHS=$(( 0x0020|0x0002 ))
 /usr/share/mime/packages/com.bitwig.BitwigStudio.xml
 
 %changelog
+* Fri Jan 27 2023 Jean Lucas <jean@4ray.co> - 4.4.6
+- 4.4.6
+
 * Mon Dec 12 2022 Jean Lucas <jean@4ray.co> - 4.4.5
 - 4.4.5
 
