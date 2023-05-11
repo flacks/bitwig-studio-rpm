@@ -1,8 +1,7 @@
 Name:		bitwig-studio
-Version:	4.4.6
+Version:	4.4.10
 Release:	1%{?dist}
 Summary:	DAW & music production software
-
 License:	Proprietary
 URL:		https://bitwig.com
 Source0:	https://downloads.bitwig.com/stable/%{version}/%{name}-%{version}.deb
@@ -39,6 +38,9 @@ export QA_RPATHS=$(( 0x0020|0x0002 ))
 /usr/share/mime/packages/com.bitwig.BitwigStudio.xml
 
 %changelog
+* Wed May 10 2023 Jean Lucas <jean@4ray.co> - 4.4.10
+- 4.4.10
+
 * Fri Jan 27 2023 Jean Lucas <jean@4ray.co> - 4.4.6
 - 4.4.6
 
