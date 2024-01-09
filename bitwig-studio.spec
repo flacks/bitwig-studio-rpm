@@ -1,5 +1,5 @@
 Name:		bitwig-studio
-Version:	4.4.10
+Version:	5.1
 Release:	1%{?dist}
 Summary:	DAW & music production software
 License:	Proprietary
@@ -34,10 +34,14 @@ export QA_RPATHS=$(( 0x0020|0x0002 ))
 /usr/share/icons/hicolor/scalable/mimetypes/com.bitwig.BitwigStudio.application-bitwig-project-folder.svg
 /usr/share/icons/hicolor/scalable/mimetypes/com.bitwig.BitwigStudio.application-bitwig-project.svg
 /usr/share/icons/hicolor/scalable/mimetypes/com.bitwig.BitwigStudio.application-bitwig-remote-controls.svg
+/usr/share/icons/hicolor/scalable/mimetypes/com.bitwig.BitwigStudio.audio-x.dawproject.svg
 /usr/share/metainfo/com.bitwig.BitwigStudio.appdata.xml
 /usr/share/mime/packages/com.bitwig.BitwigStudio.xml
 
 %changelog
+* Mon Jan 8 2024 Jean Lucas <jean@4ray.co> - 5.1
+- 5.1
+
 * Wed May 10 2023 Jean Lucas <jean@4ray.co> - 4.4.10
 - 4.4.10
 
