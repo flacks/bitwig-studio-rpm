@@ -1,16 +1,18 @@
-Name:		bitwig-studio
-Version:	5.1
+%global deb_version %%(echo %{version} | tr '~' '-' | sed 's/beta/beta-/')
+
+Name:	  	bitwig-studio
+Version:	5.2~beta2
 Release:	1%{?dist}
 Summary:	DAW & music production software
 License:	Proprietary
-URL:		https://bitwig.com
-Source0:	https://downloads.bitwig.com/stable/%{version}/%{name}-%{version}.deb
+URL:	  	https://bitwig.com
+Source0:	https://downloads.bitwig.com/stable/%{version}/%{name}-%{deb_version}.deb
 
 %description
 Bitwig Studio is a digital audio workstation (DAW) and music production software.
 
 %prep
-ar p %{_topdir}/SOURCES/%{name}-%{version}.deb data.tar.xz | tar -xJf -
+ar p %{_topdir}/SOURCES/%{name}-%{deb_version}.deb data.tar.zst | zstdcat | tar -xpf -
 
 %install
 cp -a opt usr %{buildroot}
@@ -39,6 +41,9 @@ export QA_RPATHS=$(( 0x0020|0x0002 ))
 /usr/share/mime/packages/com.bitwig.BitwigStudio.xml
 
 %changelog
+* Thu May 16 2024 Jean Lucas <jean@4ray.co> - 5.2-beta-2
+- 5.2-beta-2
+
 * Mon Jan 8 2024 Jean Lucas <jean@4ray.co> - 5.1
 - 5.1
 
